@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import App from './components/app/App';
 import {Login, Register} from './components/auth';
+import 'semantic-ui-css/semantic.min.css'
 
 const Root = ()=>{
   return (
