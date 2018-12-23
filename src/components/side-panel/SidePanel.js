@@ -2,7 +2,7 @@ import React from 'react';
 import {Menu} from 'semantic-ui-react';
 import UserPanel from './user-panel';
 
-const SidePanel = ()=>{
+const SidePanel = ({currentUser})=>{
     return (
         <div>
             <Menu
@@ -11,7 +11,7 @@ const SidePanel = ()=>{
             fixed='left'
             vertical
             style={{background: '#492098'}}>
-                <UserPanel />
+                <UserPanel currentUser={currentUser} />
             </Menu>
         </div>
     )
