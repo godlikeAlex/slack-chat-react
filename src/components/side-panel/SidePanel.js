@@ -1,19 +1,23 @@
 import React from 'react';
 import {Menu} from 'semantic-ui-react';
 import UserPanel from './user-panel';
+import Channels from './chanels';
+import DirectMessages from './DirectMessages';
+import Starred from './stared';
 
-const SidePanel = ({currentUser})=>{
+const SidePanel = ({currentUser, primaryColor})=>{
     return (
-        <div>
             <Menu
             size='large'
             inverted
             fixed='left'
             vertical
-            style={{background: '#492098'}}>
-                <UserPanel currentUser={currentUser} />
+            style={{background: primaryColor }}>
+                <UserPanel primaryColor={primaryColor} currentUser={currentUser} />
+                <Starred currentUser={currentUser} />
+                <Channels currentUser={currentUser} />
+                <DirectMessages currentUser={currentUser} />
             </Menu>
-        </div>
     )
 };
 
